@@ -65,7 +65,17 @@ function HomePage() {
           <Reveal delay={0.05}>
             <h1 className="mt-8 font-display font-bold tracking-tight text-balance text-5xl sm:text-6xl md:text-7xl lg:text-[88px] leading-[0.95]">
               We don't just market —<br className="hidden sm:block" />
-              <span className="gradient-text">we scale businesses.</span>
+              <span className="relative inline-block align-baseline">
+                <motion.span
+                  aria-hidden
+                  initial={{ scaleX: 0 }}
+                  animate={{ scaleX: 1 }}
+                  transition={{ delay: 0.9, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                  style={{ transformOrigin: "left center" }}
+                  className="absolute inset-x-[-0.15em] inset-y-[0.05em] -z-10 rounded-[0.2em] bg-highlight"
+                />
+                <span className="relative">we get the job done.</span>
+              </span>
             </h1>
           </Reveal>
 
