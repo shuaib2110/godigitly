@@ -42,6 +42,7 @@
   --color-violet: var(--violet);
   --color-electric: var(--electric);
   --color-lime: var(--lime);
+  --color-highlight: var(--highlight);
 
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
@@ -67,6 +68,7 @@
   --violet: oklch(0.55 0.22 285);           /* premium violet accent */
   --electric: oklch(0.65 0.18 240);         /* electric blue */
   --lime: oklch(0.88 0.18 120);             /* subtle lime highlight */
+  --highlight: oklch(0.92 0.2 95);          /* adko-style yellow marker */
 
   --background: var(--cream);
   --foreground: var(--ink);
