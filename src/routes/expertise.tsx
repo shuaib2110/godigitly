@@ -2,15 +2,30 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Reveal } from "@/components/site/Reveal";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState } from "react";
-import { Facebook, Search, Magnet, GitBranch, MessageSquare, Plus, ArrowUpRight } from "lucide-react";
+import {
+  Facebook,
+  Search,
+  Magnet,
+  GitBranch,
+  MessageSquare,
+  Plus,
+  ArrowUpRight,
+} from "lucide-react";
 
 export const Route = createFileRoute("/expertise")({
   head: () => ({
     meta: [
       { title: "Our Expertise — Facebook Ads, Google Ads, WhatsApp Funnels | GoDigitly" },
-      { name: "description", content: "Performance marketing services: Facebook Ads, Google Ads, lead generation, funnel building and WhatsApp marketing — all built for ROI." },
+      {
+        name: "description",
+        content:
+          "Performance marketing services: Facebook Ads, Google Ads, lead generation, funnel building and WhatsApp marketing — all built for ROI.",
+      },
       { property: "og:title", content: "GoDigitly Expertise" },
-      { property: "og:description", content: "The growth services we ship — engineered for measurable ROI." },
+      {
+        property: "og:description",
+        content: "The growth services we ship — engineered for measurable ROI.",
+      },
     ],
   }),
   component: ExpertisePage,
@@ -64,19 +79,25 @@ function ExpertisePage() {
     <>
       <section className="relative overflow-hidden grain">
         <div aria-hidden className="absolute inset-0 -z-10">
-          <motion.div style={{ y: yBlob }} className="blob absolute top-10 -left-20 size-[400px] bg-violet/30" />
+          <motion.div
+            style={{ y: yBlob }}
+            className="blob absolute top-10 -left-20 size-[400px] bg-violet/30"
+          />
           <div className="blob absolute top-40 right-0 size-[340px] bg-electric/30" />
         </div>
         <div className="mx-auto max-w-7xl px-6 pt-16 pb-20 sm:pt-24">
           <Reveal>
-            <p className="text-sm uppercase tracking-widest text-violet font-semibold">Our expertise</p>
+            <p className="text-sm uppercase tracking-widest text-violet font-semibold">
+              Our expertise
+            </p>
             <h1 className="mt-4 font-display font-bold tracking-tight text-balance text-5xl sm:text-6xl md:text-7xl leading-[0.95] max-w-5xl">
               Five disciplines. <span className="gradient-text">One growth engine.</span>
             </h1>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-8 text-xl text-muted-foreground max-w-2xl text-pretty">
-              Performance marketing isn't one channel — it's a system. Here's what we ship to make yours compound.
+              Performance marketing isn't one channel — it's a system. Here's what we ship to make
+              yours compound.
             </p>
           </Reveal>
         </div>
@@ -94,15 +115,29 @@ function ExpertisePage() {
                   onClick={() => setOpen(isOpen ? null : i)}
                   className="w-full text-left p-8 sm:p-10 flex items-center gap-6"
                 >
-                  <div className={`shrink-0 size-14 sm:size-16 rounded-2xl grid place-items-center ${isOpen ? "bg-white/15 text-white" : "gradient-bg text-white"}`}>
+                  <div
+                    className={`shrink-0 size-14 sm:size-16 rounded-2xl grid place-items-center ${isOpen ? "bg-white/15 text-white" : "gradient-bg text-white"}`}
+                  >
                     <s.icon className="size-6" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <div className={`text-xs font-semibold tracking-widest uppercase ${isOpen ? "text-background/60" : "text-violet"}`}>0{i + 1}</div>
-                    <h3 className="mt-1 font-display text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">{s.title}</h3>
-                    <p className={`mt-1 text-base sm:text-lg ${isOpen ? "text-background/70" : "text-muted-foreground"}`}>{s.short}</p>
+                    <div
+                      className={`text-xs font-semibold tracking-widest uppercase ${isOpen ? "text-background/60" : "text-violet"}`}
+                    >
+                      0{i + 1}
+                    </div>
+                    <h3 className="mt-1 font-display text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">
+                      {s.title}
+                    </h3>
+                    <p
+                      className={`mt-1 text-base sm:text-lg ${isOpen ? "text-background/70" : "text-muted-foreground"}`}
+                    >
+                      {s.short}
+                    </p>
                   </div>
-                  <div className={`shrink-0 size-12 rounded-full grid place-items-center transition-transform ${isOpen ? "bg-white/15 rotate-45" : "border border-border"}`}>
+                  <div
+                    className={`shrink-0 size-12 rounded-full grid place-items-center transition-transform ${isOpen ? "bg-white/15 rotate-45" : "border border-border"}`}
+                  >
                     <Plus className="size-5" />
                   </div>
                 </button>
@@ -135,7 +170,10 @@ function ExpertisePage() {
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-balance max-w-xl">
               Let's build your growth engine.
             </h2>
-            <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-white text-foreground px-7 py-4 font-semibold w-fit">
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 rounded-full bg-white text-foreground px-7 py-4 font-semibold w-fit"
+            >
               Book a strategy call <ArrowUpRight className="size-4" />
             </Link>
           </div>

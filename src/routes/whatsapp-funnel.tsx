@@ -2,15 +2,30 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Reveal } from "@/components/site/Reveal";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
-import { ArrowUpRight, Check, MessageCircle, ScanLine, Megaphone, MousePointerClick, Trophy } from "lucide-react";
+import {
+  ArrowUpRight,
+  Check,
+  MessageCircle,
+  ScanLine,
+  Megaphone,
+  MousePointerClick,
+  Trophy,
+} from "lucide-react";
 
 export const Route = createFileRoute("/whatsapp-funnel")({
   head: () => ({
     meta: [
       { title: "WhatsApp Funnel — Convert Ad Traffic into Closed Deals | GoDigitly" },
-      { name: "description", content: "Click-to-WhatsApp ads + automated qualification + human handoff. The fastest path from ad spend to closed deal in India." },
+      {
+        name: "description",
+        content:
+          "Click-to-WhatsApp ads + automated qualification + human handoff. The fastest path from ad spend to closed deal in India.",
+      },
       { property: "og:title", content: "WhatsApp Funnels by GoDigitly" },
-      { property: "og:description", content: "An interactive look at how we turn clicks into conversations into customers." },
+      {
+        property: "og:description",
+        content: "An interactive look at how we turn clicks into conversations into customers.",
+      },
     ],
   }),
   component: WhatsappFunnelPage,
@@ -21,7 +36,10 @@ const chatScript = [
   { from: "user", text: "I run a D2C brand and want to scale my ads." },
   { from: "bot", text: "Awesome — what's your current monthly ad spend?" },
   { from: "user", text: "Around ₹3L/month, ROAS sitting at 1.8×." },
-  { from: "bot", text: "Got it. We've taken 12 brands at your stage past 4× ROAS in 90 days. Want a free audit slot tomorrow?" },
+  {
+    from: "bot",
+    text: "Got it. We've taken 12 brands at your stage past 4× ROAS in 90 days. Want a free audit slot tomorrow?",
+  },
   { from: "user", text: "Yes please 🙌" },
   { from: "bot", text: "Perfect — booking you with Arjun. Confirmation sent ✅" },
 ];
@@ -35,7 +53,10 @@ function WhatsappFunnelPage() {
     setVisibleMsgs(0);
     const id = setInterval(() => {
       setVisibleMsgs((v) => {
-        if (v >= chatScript.length) { clearInterval(id); return v; }
+        if (v >= chatScript.length) {
+          clearInterval(id);
+          return v;
+        }
         return v + 1;
       });
     }, 900);
@@ -102,7 +123,9 @@ function WhatsappFunnelPage() {
                       <div className="mx-auto size-14 rounded-full bg-[#25D366] grid place-items-center text-white">
                         <Check className="size-7" />
                       </div>
-                      <div className="mt-3 font-display text-foreground font-semibold">Connected!</div>
+                      <div className="mt-3 font-display text-foreground font-semibold">
+                        Connected!
+                      </div>
                     </div>
                   </motion.div>
                 )}
@@ -121,10 +144,14 @@ function WhatsappFunnelPage() {
               <div className="rounded-[2.5rem] border-[10px] border-foreground bg-foreground p-2 shadow-2xl">
                 <div className="rounded-[1.7rem] bg-[#ECE5DD] overflow-hidden h-[560px] flex flex-col">
                   <div className="bg-[#075E54] text-white px-4 py-3 flex items-center gap-3">
-                    <div className="size-9 rounded-full bg-white/20 grid place-items-center font-display font-bold">G</div>
+                    <div className="size-9 rounded-full bg-white/20 grid place-items-center font-display font-bold">
+                      G
+                    </div>
                     <div>
                       <div className="font-semibold leading-tight">GoDigitly</div>
-                      <div className="text-xs opacity-80">{scanned ? "online" : "tap QR to start"}</div>
+                      <div className="text-xs opacity-80">
+                        {scanned ? "online" : "tap QR to start"}
+                      </div>
                     </div>
                   </div>
                   <div className="flex-1 overflow-y-auto p-3 space-y-2">
@@ -141,11 +168,19 @@ function WhatsappFunnelPage() {
                         </motion.div>
                       ))}
                       {scanned && visibleMsgs < chatScript.length && (
-                        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="bg-white rounded-2xl px-3 py-2 w-16">
+                        <motion.div
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          className="bg-white rounded-2xl px-3 py-2 w-16"
+                        >
                           <div className="flex gap-1">
                             {[0, 1, 2].map((i) => (
-                              <motion.span key={i} className="size-1.5 rounded-full bg-foreground/40"
-                                animate={{ y: [0, -3, 0] }} transition={{ duration: 0.8, repeat: Infinity, delay: i * 0.15 }} />
+                              <motion.span
+                                key={i}
+                                className="size-1.5 rounded-full bg-foreground/40"
+                                animate={{ y: [0, -3, 0] }}
+                                transition={{ duration: 0.8, repeat: Infinity, delay: i * 0.15 }}
+                              />
                             ))}
                           </div>
                         </motion.div>
@@ -153,7 +188,9 @@ function WhatsappFunnelPage() {
                     </AnimatePresence>
                     {!scanned && (
                       <div className="h-full grid place-items-center text-foreground/50 text-sm py-20 text-center">
-                        Scan the QR to see the<br/>chat automation in action ↗
+                        Scan the QR to see the
+                        <br />
+                        chat automation in action ↗
                       </div>
                     )}
                   </div>
@@ -175,13 +212,23 @@ function WhatsappFunnelPage() {
         <div className="mt-12 grid md:grid-cols-4 gap-4">
           {[
             { icon: Megaphone, t: "Ad", d: "Click-to-WhatsApp creative built for thumb-stops." },
-            { icon: MousePointerClick, t: "Landing", d: "Optional landing or direct WhatsApp open." },
-            { icon: MessageCircle, t: "WhatsApp", d: "Auto-qualify, answer FAQs, route to humans." },
+            {
+              icon: MousePointerClick,
+              t: "Landing",
+              d: "Optional landing or direct WhatsApp open.",
+            },
+            {
+              icon: MessageCircle,
+              t: "WhatsApp",
+              d: "Auto-qualify, answer FAQs, route to humans.",
+            },
             { icon: Trophy, t: "Conversion", d: "Booked call, paid order, signed deal." },
           ].map((s, i) => (
             <Reveal key={s.t} delay={i * 0.06}>
               <div className="rounded-3xl border border-border bg-card p-6 h-full relative">
-                <div className="absolute -top-3 left-6 text-xs px-2 py-0.5 rounded-full bg-foreground text-background font-semibold">0{i + 1}</div>
+                <div className="absolute -top-3 left-6 text-xs px-2 py-0.5 rounded-full bg-foreground text-background font-semibold">
+                  0{i + 1}
+                </div>
                 <s.icon className="size-7 text-violet mt-3" />
                 <h3 className="mt-4 font-display text-xl font-semibold">{s.t}</h3>
                 <p className="mt-1 text-sm text-muted-foreground">{s.d}</p>
@@ -199,13 +246,21 @@ function WhatsappFunnelPage() {
               <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-balance max-w-xl">
                 Start your WhatsApp funnel.
               </h2>
-              <p className="mt-3 text-white/80 max-w-md">Live in 14 days. Built for closing, not just chatting.</p>
+              <p className="mt-3 text-white/80 max-w-md">
+                Live in 14 days. Built for closing, not just chatting.
+              </p>
             </div>
             <div className="relative flex flex-wrap gap-3">
-              <a href="https://wa.me/919999999999" className="inline-flex items-center gap-2 rounded-full bg-[#25D366] text-white px-7 py-4 font-semibold">
+              <a
+                href="https://wa.me/919999999999"
+                className="inline-flex items-center gap-2 rounded-full bg-[#25D366] text-white px-7 py-4 font-semibold"
+              >
                 <MessageCircle className="size-4" /> Message us
               </a>
-              <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-white text-foreground px-7 py-4 font-semibold">
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 rounded-full bg-white text-foreground px-7 py-4 font-semibold"
+              >
                 Book a call <ArrowUpRight className="size-4" />
               </Link>
             </div>
@@ -224,15 +279,23 @@ function QRCode() {
     <svg viewBox={`0 0 ${cells} ${cells}`} className="w-full h-full">
       {Array.from({ length: cells }, (_, y) =>
         Array.from({ length: cells }, (_, x) => {
-          const inFinder =
-            (x < 7 && y < 7) || (x > cells - 8 && y < 7) || (x < 7 && y > cells - 8);
+          const inFinder = (x < 7 && y < 7) || (x > cells - 8 && y < 7) || (x < 7 && y > cells - 8);
           const onFinder =
-            inFinder &&
-            !((x > 0 && x < 6 && y > 0 && y < 6) || (x > cells - 7 && x < cells - 1 && y > 0 && y < 6) || (x > 0 && x < 6 && y > cells - 7 && y < cells - 1)) ||
-            (inFinder && ((x > 1 && x < 5 && y > 1 && y < 5) || (x > cells - 6 && x < cells - 2 && y > 1 && y < 5) || (x > 1 && x < 5 && y > cells - 6 && y < cells - 2)));
+            (inFinder &&
+              !(
+                (x > 0 && x < 6 && y > 0 && y < 6) ||
+                (x > cells - 7 && x < cells - 1 && y > 0 && y < 6) ||
+                (x > 0 && x < 6 && y > cells - 7 && y < cells - 1)
+              )) ||
+            (inFinder &&
+              ((x > 1 && x < 5 && y > 1 && y < 5) ||
+                (x > cells - 6 && x < cells - 2 && y > 1 && y < 5) ||
+                (x > 1 && x < 5 && y > cells - 6 && y < cells - 2)));
           const fill = inFinder ? onFinder : seed(x, y);
-          return fill ? <rect key={`${x}-${y}`} x={x} y={y} width="1" height="1" fill="#0F172A" /> : null;
-        })
+          return fill ? (
+            <rect key={`${x}-${y}`} x={x} y={y} width="1" height="1" fill="#0F172A" />
+          ) : null;
+        }),
       )}
       {/* WhatsApp icon center */}
       <circle cx={cells / 2} cy={cells / 2} r="3" fill="white" />

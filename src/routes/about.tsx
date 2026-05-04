@@ -6,19 +6,42 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About GoDigitly — Performance Marketing for Ambitious Brands" },
-      { name: "description", content: "GoDigitly is a team of strategists, media buyers and creators obsessed with scaling brands through performance marketing." },
+      {
+        name: "description",
+        content:
+          "GoDigitly is a team of strategists, media buyers and creators obsessed with scaling brands through performance marketing.",
+      },
       { property: "og:title", content: "About GoDigitly" },
-      { property: "og:description", content: "Our story, mission and the team behind your growth." },
+      {
+        property: "og:description",
+        content: "Our story, mission and the team behind your growth.",
+      },
     ],
   }),
   component: AboutPage,
 });
 
 const timeline = [
-  { year: "2020", title: "Started in a garage", desc: "Two founders, one laptop, and a shared obsession with ROI." },
-  { year: "2021", title: "First ₹1Cr campaign", desc: "Scaled a D2C beauty brand from ₹2L to ₹1Cr/month in 6 months." },
-  { year: "2023", title: "30-person studio", desc: "Built a team of media buyers, creators and funnel architects." },
-  { year: "2025", title: "150+ brands scaled", desc: "₹240Cr+ in revenue generated for clients across 4 continents." },
+  {
+    year: "2020",
+    title: "Started in a garage",
+    desc: "Two founders, one laptop, and a shared obsession with ROI.",
+  },
+  {
+    year: "2021",
+    title: "First ₹1Cr campaign",
+    desc: "Scaled a D2C beauty brand from ₹2L to ₹1Cr/month in 6 months.",
+  },
+  {
+    year: "2023",
+    title: "30-person studio",
+    desc: "Built a team of media buyers, creators and funnel architects.",
+  },
+  {
+    year: "2025",
+    title: "150+ brands scaled",
+    desc: "₹240Cr+ in revenue generated for clients across 4 continents.",
+  },
 ];
 
 function AboutPage() {
@@ -38,7 +61,8 @@ function AboutPage() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-8 text-xl text-muted-foreground max-w-2xl text-pretty">
-              GoDigitly was born from a simple frustration — most agencies optimize for retainers, not results. We built the studio we wished existed: senior, lean and ROI-obsessed.
+              GoDigitly was born from a simple frustration — most agencies optimize for retainers,
+              not results. We built the studio we wished existed: senior, lean and ROI-obsessed.
             </p>
           </Reveal>
         </div>
@@ -48,9 +72,21 @@ function AboutPage() {
       <section className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid md:grid-cols-3 gap-5">
           {[
-            { icon: Rocket, t: "Mission", d: "Make world-class performance marketing accessible to founders who care about every rupee of ad spend." },
-            { icon: Eye, t: "Vision", d: "Be the growth engine behind 1,000 category-defining brands by 2030." },
-            { icon: Heart, t: "Values", d: "Radical transparency, senior craft, and metrics that move boardroom needles." },
+            {
+              icon: Rocket,
+              t: "Mission",
+              d: "Make world-class performance marketing accessible to founders who care about every rupee of ad spend.",
+            },
+            {
+              icon: Eye,
+              t: "Vision",
+              d: "Be the growth engine behind 1,000 category-defining brands by 2030.",
+            },
+            {
+              icon: Heart,
+              t: "Values",
+              d: "Radical transparency, senior craft, and metrics that move boardroom needles.",
+            },
           ].map((b) => (
             <Reveal key={b.t}>
               <div className="rounded-3xl border border-border bg-card p-8 h-full">
@@ -76,15 +112,21 @@ function AboutPage() {
             </div>
           </Reveal>
           <Reveal delay={0.1} className="md:col-span-7">
-            <p className="text-sm uppercase tracking-widest text-violet font-semibold">Founder note</p>
+            <p className="text-sm uppercase tracking-widest text-violet font-semibold">
+              Founder note
+            </p>
             <h2 className="mt-3 font-display text-4xl sm:text-5xl font-bold tracking-tight text-balance">
               "We're allergic to vanity metrics."
             </h2>
             <p className="mt-6 text-lg text-muted-foreground">
-              I started GoDigitly after a decade of running growth at venture-backed brands. The pattern was clear — agencies promised the moon and delivered dashboards. We built GoDigitly to do the opposite: ship fewer, sharper campaigns and obsess over the only metrics that matter — pipeline, payback and profit.
+              I started GoDigitly after a decade of running growth at venture-backed brands. The
+              pattern was clear — agencies promised the moon and delivered dashboards. We built
+              GoDigitly to do the opposite: ship fewer, sharper campaigns and obsess over the only
+              metrics that matter — pipeline, payback and profit.
             </p>
             <p className="mt-4 text-lg text-muted-foreground">
-              Today our team of 30 ships across India, the UAE and the US. Same standard, same obsession.
+              Today our team of 30 ships across India, the UAE and the US. Same standard, same
+              obsession.
             </p>
           </Reveal>
         </div>
@@ -102,7 +144,9 @@ function AboutPage() {
           <div className="space-y-12">
             {timeline.map((t, i) => (
               <Reveal key={t.year} delay={i * 0.08}>
-                <div className={`relative grid sm:grid-cols-2 gap-6 ${i % 2 === 0 ? "" : "sm:[&>*:first-child]:order-2"}`}>
+                <div
+                  className={`relative grid sm:grid-cols-2 gap-6 ${i % 2 === 0 ? "" : "sm:[&>*:first-child]:order-2"}`}
+                >
                   <div className="pl-12 sm:pl-0 sm:pr-12 sm:text-right">
                     <div className="font-display text-5xl font-bold gradient-text">{t.year}</div>
                   </div>
@@ -125,7 +169,10 @@ function AboutPage() {
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-balance max-w-xl">
               Want this team building your growth engine?
             </h2>
-            <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-background text-foreground px-7 py-4 font-semibold w-fit">
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 rounded-full bg-background text-foreground px-7 py-4 font-semibold w-fit"
+            >
               Book a call <ArrowUpRight className="size-4" />
             </Link>
           </div>

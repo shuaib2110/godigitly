@@ -16,7 +16,10 @@ function NotFoundComponent() {
           The page you're looking for doesn't exist or has been moved.
         </p>
         <div className="mt-6">
-          <Link to="/" className="inline-flex items-center justify-center rounded-full bg-foreground px-5 py-2.5 text-sm font-semibold text-background hover:opacity-90 transition">
+          <Link
+            to="/"
+            className="inline-flex items-center justify-center rounded-full bg-foreground px-5 py-2.5 text-sm font-semibold text-background hover:opacity-90 transition"
+          >
             Go home
           </Link>
         </div>
@@ -31,11 +34,22 @@ export const Route = createRootRoute({
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "GoDigitly — Performance Marketing & Lead Generation Agency" },
-      { name: "description", content: "GoDigitly is a performance-driven digital advertising agency. Facebook Ads, Google Ads, lead generation, funnels and WhatsApp marketing that scale revenue." },
+      {
+        name: "description",
+        content:
+          "GoDigitly is a performance-driven digital advertising agency. Facebook Ads, Google Ads, lead generation, funnels and WhatsApp marketing that scale revenue.",
+      },
       { name: "author", content: "GoDigitly" },
-      { name: "keywords", content: "Digital Marketing Agency, Lead Generation Agency, Ads Agency India, Performance Marketing, Facebook Ads, Google Ads, WhatsApp Marketing" },
+      {
+        name: "keywords",
+        content:
+          "Digital Marketing Agency, Lead Generation Agency, Ads Agency India, Performance Marketing, Facebook Ads, Google Ads, WhatsApp Marketing",
+      },
       { property: "og:title", content: "GoDigitly — We Don't Just Market, We Scale Businesses" },
-      { property: "og:description", content: "Performance marketing, lead generation and WhatsApp funnels engineered for ROI." },
+      {
+        property: "og:description",
+        content: "Performance marketing, lead generation and WhatsApp funnels engineered for ROI.",
+      },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "GoDigitly" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -46,7 +60,10 @@ export const Route = createRootRoute({
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap",
+      },
       { rel: "canonical", href: "https://godigitly.com/" },
     ],
     scripts: [
