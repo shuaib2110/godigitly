@@ -36,7 +36,7 @@ const testimonials = [
   { quote: "From 2x to 6x ROAS in one quarter. The creative + media buying combo is genuinely elite.", name: "Priya Shah", role: "Growth Lead, Aurora Living" },
 ];
 
-const logos = ["Lumeo", "FitForge", "Aurora", "Northwind", "Halcyon", "Voltlane", "Kaiya", "Pulse&Co"];
+const logos = ["Dominate", "Visible", "Found", "Viral", "Automated", "Reputation", "Ranked", "Effortless", "Noticed","Trust","Scale","Own","Results"];
 
 function HomePage() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -49,22 +49,22 @@ function HomePage() {
       {/* HERO */}
       <section ref={heroRef} className="relative overflow-hidden grain">
         <div aria-hidden className="absolute inset-0 -z-10">
-          <div className="blob absolute top-20 -left-24 size-[420px] bg-violet/30" />
-          <div className="blob absolute -top-10 right-0 size-[360px] bg-electric/30" />
-          <div className="blob absolute bottom-0 left-1/3 size-[300px] bg-lime/40" />
+          <div className="blob absolute top-20 -left-24 size-105 bg-violet/30" />
+          <div className="blob absolute -top-10 right-0 size-90 bg-electric/30" />
+          <div className="blob absolute bottom-0 left-1/3 size-75 bg-lime/40" />
         </div>
 
         <motion.div style={{ y, opacity }} className="mx-auto max-w-7xl px-6 pt-16 pb-28 sm:pt-24 sm:pb-36 text-center">
           <Reveal>
             <span className="inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs font-medium tracking-wide">
               <span className="size-1.5 rounded-full bg-violet animate-pulse" />
-              Now booking Q3 — 4 client slots left
+              Kill Your Competitors — 4 slots left
             </span>
           </Reveal>
 
           <Reveal delay={0.05}>
             <h1 className="mt-8 font-display font-bold tracking-tight text-balance text-5xl sm:text-6xl md:text-7xl lg:text-[88px] leading-[0.95]">
-              We don't just market —<br className="hidden sm:block" />
+              Stop being invisible. —<br className="hidden sm:block" />
               <span className="relative inline-block align-baseline">
                 <motion.span
                   aria-hidden
@@ -74,15 +74,14 @@ function HomePage() {
                   style={{ transformOrigin: "left center" }}
                   className="absolute inset-x-[-0.15em] inset-y-[0.05em] -z-10 rounded-[0.2em] bg-highlight"
                 />
-                <span className="relative">we get the job done.</span>
+                <span className="relative"> Start being unforgettable.</span>
               </span>
             </h1>
           </Reveal>
 
           <Reveal delay={0.15}>
             <p className="mt-8 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
-              A performance-marketing studio for ambitious brands. Strategy, creative, media-buying and funnels — engineered for compounding ROI.
-            </p>
+We build the online presence your business deserves — strategy, websites, apps, reels and AI video.  Because your competitor is already online. It's time you owned the space.            </p>
           </Reveal>
 
           <Reveal delay={0.25}>
@@ -106,7 +105,7 @@ function HomePage() {
         </motion.div>
 
         {/* Logo marquee */}
-        <div className="relative border-y border-border/60 bg-foreground/[0.02] overflow-hidden">
+        <div className="relative border-y border-border/60 bg-foreground/2 overflow-hidden">
           <div className="flex marquee-track gap-16 py-6 whitespace-nowrap">
             {[...logos, ...logos].map((l, i) => (
               <span key={i} className="font-display text-2xl font-semibold text-foreground/40 tracking-tight">{l}</span>
