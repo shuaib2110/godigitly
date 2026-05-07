@@ -252,7 +252,7 @@ function WhatsappFunnelPage() {
             </div>
             <div className="relative flex flex-wrap gap-3">
               <a
-                href="https://wa.me/919999999999"
+                href="https://wa.me/917065993749"
                 className="inline-flex items-center gap-2 rounded-full bg-[#25D366] text-white px-7 py-4 font-semibold"
               >
                 <MessageCircle className="size-4" /> Message us

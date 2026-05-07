@@ -161,7 +161,7 @@ function ContactPage() {
           <div className="lg:col-span-5 space-y-5">
             <Reveal>
               <a
-                href="https://wa.me/919999999999"
+                href="https://wa.me/917065993749"
                 className="block rounded-[2rem] bg-[#25D366] text-white p-8 hover:scale-[1.01] transition"
               >
                 <MessageCircle className="size-7" />
@@ -178,7 +178,7 @@ function ContactPage() {
             <Reveal delay={0.05}>
               <div className="rounded-[2rem] bg-card border border-border p-8 space-y-5">
                 <Info icon={Mail} label="Email" value="hello@godigitly.com" />
-                <Info icon={Phone} label="Phone" value="+91 99999 99999" />
+                <Info icon={Phone} label="Phone" value="+91 70659 93749" />
                 <Info icon={MapPin} label="HQ" value="Bengaluru, India" />
               </div>
             </Reveal>

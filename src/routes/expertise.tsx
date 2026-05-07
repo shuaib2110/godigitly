@@ -3,11 +3,11 @@ import { Reveal } from "@/components/site/Reveal";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState } from "react";
 import {
-  Facebook,
-  Search,
-  Magnet,
-  GitBranch,
+  Sparkles,
+  Globe,
+  MapPinned,
   MessageSquare,
+  Megaphone,
   Plus,
   ArrowUpRight,
 } from "lucide-react";
@@ -33,32 +33,26 @@ export const Route = createFileRoute("/expertise")({
 
 const services = [
   {
-    icon: Facebook,
-    title: "Facebook & Instagram Ads",
-    short: "Meta media buying that compounds.",
-    long: "Creative testing frameworks, ASC+ scaling, hook iteration and CBO/ABO blending. We build Meta ad accounts that ship 40+ creatives a month and hit predictable CAC at scale.",
-    bullets: ["Creative testing systems", "Audience & offer iteration", "Pixel & CAPI tracking"],
+    icon: Sparkles,
+    title: "AI Content Creation",
+    short: "Content engineered for attention.",
+    long: "AI-powered reels, cinematic edits and branded social content designed to increase engagement, reach and customer inquiries across modern platforms.",
+    bullets: ["AI-generated reels", "Cinematic short-form edits", "Branded social content"],
   },
   {
-    icon: Search,
-    title: "Google Ads & Performance Max",
-    short: "Search, Shopping, PMax & YouTube.",
-    long: "Bottom-funnel intent dialed in. We build Search + PMax structures that protect brand, capture demand, and feed cold traffic into retargeting funnels.",
-    bullets: ["Search + PMax architecture", "Shopping feed optimization", "YouTube demand gen"],
+    icon: Globe,
+    title: "Website & Landing Pages",
+    short: "Fast websites that convert visitors.",
+    long: "Modern responsive websites and landing pages optimized for mobile, SEO and lead generation with seamless WhatsApp integration.",
+    bullets: ["Responsive business websites", "SEO optimization", "WhatsApp lead integration"],
   },
+
   {
-    icon: Magnet,
-    title: "Lead Generation",
-    short: "Pipeline that closes — not just clicks.",
-    long: "B2B and high-ticket B2C lead funnels. We optimize for SQLs and revenue, not vanity form-fills, with CRM-aligned scoring and nurture automations.",
-    bullets: ["Qualified lead funnels", "CRM + scoring", "Nurture automations"],
-  },
-  {
-    icon: GitBranch,
-    title: "Funnel Building",
-    short: "Landing pages that convert at 8–14%.",
-    long: "Conversion-engineered landing pages, offers and checkout flows. Built fast, tested faster — every funnel ships with proper analytics and CRO loops.",
-    bullets: ["High-converting landers", "Offer engineering", "CRO experimentation"],
+    icon: MapPinned,
+    title: "Local Business Growth",
+    short: "Dominate your local market online.",
+    long: "Google Business optimization and local visibility systems that help businesses rank higher, build trust and attract more walk-in customers.",
+    bullets: ["Google Business optimization", "Local SEO setup", "Review growth strategy"],
   },
   {
     icon: MessageSquare,
@@ -66,6 +60,14 @@ const services = [
     short: "Conversational funnels that close.",
     long: "Click-to-WhatsApp ads, automated qualification flows, broadcast campaigns and human handoff. The fastest path from ad spend to closed deal in India.",
     bullets: ["Click-to-WhatsApp ads", "Automated qualification", "Broadcast & retargeting"],
+  },
+
+  {
+    icon: Megaphone,
+    title: "Paid Ads & Lead Funnels",
+    short: "Performance campaigns focused on ROI.",
+    long: "Meta and Instagram ad systems built to generate quality leads, inquiries and bookings while maximizing return on ad spend.",
+    bullets: ["Meta & Instagram ads", "Lead generation funnels", "Conversion optimization"],
   },
 ];
 

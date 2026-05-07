@@ -1,7 +1,16 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { ArrowUpRight, Sparkles, Target, TrendingUp, Zap, Quote, Star } from "lucide-react";
+import {
+  ArrowUpRight,
+  Sparkles,
+  Globe,
+  Megaphone,
+  MessageSquare,
+  Quote,
+  Star,
+  MessageCircle,
+} from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
 
 export const Route = createFileRoute("/")({
@@ -25,52 +34,52 @@ export const Route = createFileRoute("/")({
 
 const services = [
   {
-    icon: Target,
-    title: "Performance Ads",
-    desc: "Meta & Google ad systems that hit predictable CAC and scale profitably.",
+    icon: Megaphone,
+    title: "Paid Ads & Lead Funnels",
+    desc: "Meta and Instagram ad systems designed to generate quality leads, bookings and measurable business growth.",
   },
   {
     icon: Sparkles,
-    title: "Creative Studio",
-    desc: "Scroll-stopping ad creatives produced weekly to keep CTR & ROAS climbing.",
+    title: "AI Content Creation",
+    desc: "Scroll-stopping AI reels, cinematic edits and branded content crafted to increase reach and engagement.",
   },
   {
-    icon: TrendingUp,
-    title: "Funnel Building",
-    desc: "Landing pages, offers and automations that convert clicks into customers.",
+    icon: Globe,
+    title: "Website & Landing Pages",
+    desc: "Modern high-converting websites and landing pages optimized for speed, SEO and customer conversion.",
   },
   {
-    icon: Zap,
+    icon: MessageSquare,
     title: "WhatsApp Marketing",
-    desc: "Conversational funnels turning ad traffic into qualified, ready-to-buy leads.",
+    desc: "Automated WhatsApp funnels that turn inquiries into qualified, ready-to-buy customers.",
   },
 ];
 
 const stats = [
-  { value: "₹240Cr+", label: "Revenue generated" },
-  { value: "320%", label: "Avg. ROAS uplift" },
-  { value: "150+", label: "Brands scaled" },
-  { value: "12M+", label: "Leads captured" },
+  { value: "50+", label: "Projects delivered" },
+  { value: "120K+", label: "Leads generated" },
+  { value: "30+", label: "Businesses supported" },
+  { value: "4x+", label: "Average engagement growth" },
 ];
 
 const testimonials = [
   {
     quote:
-      "GoDigitly cut our CAC by 38% in two months and tripled our qualified pipeline. They actually move the number.",
-    name: "Aisha Rao",
-    role: "CMO, Lumeo Beauty",
+      "GoDigitly completely transformed our gym's online presence. We started getting daily inquiries through Instagram and WhatsApp.",
+    name: "Arjun Malik",
+    role: "Owner, Alpha Fitness",
   },
   {
     quote:
-      "Best agency we've worked with — strategic, fast, and obsessed with ROI. Our WhatsApp funnel converts at 11%.",
-    name: "Rohan Mehta",
-    role: "Founder, FitForge",
+      "The AI reels and landing page brought us more customers in one month than traditional promotions ever did.",
+    name: "Sana Verma",
+    role: "Founder, Brew Avenue Café",
   },
   {
     quote:
-      "From 2x to 6x ROAS in one quarter. The creative + media buying combo is genuinely elite.",
-    name: "Priya Shah",
-    role: "Growth Lead, Aurora Living",
+      "Fast delivery, modern creative work and strong communication. GoDigitly helped us look like a premium brand online.",
+    name: "Rahul Khanna",
+    role: "Director, Urban Salon Studio",
   },
 ];
 
@@ -187,8 +196,8 @@ function HomePage() {
         </div>
       </section>
 
-      {/* STATS */}
-      <section className="mx-auto max-w-7xl px-6 py-24">
+      {/* STATS HERE*/}
+      {/* <section className="mx-auto max-w-7xl px-6 py-24">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {stats.map((s, i) => (
             <Reveal key={s.label} delay={i * 0.05}>
@@ -201,7 +210,7 @@ function HomePage() {
             </Reveal>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* SERVICES */}
       <section className="mx-auto max-w-7xl px-6 py-24">
@@ -246,89 +255,194 @@ function HomePage() {
       <section className="relative mx-auto max-w-7xl px-6 py-24">
         <Reveal>
           <p className="text-sm uppercase tracking-widest text-violet font-semibold">Our process</p>
+
           <h2 className="mt-3 font-display text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight max-w-3xl text-balance">
-            From audit to scale, in 30 days.
+            Turning businesses into customer magnets.
           </h2>
+
+          <p className="mt-5 max-w-2xl text-muted-foreground text-lg">
+            From content creation to WhatsApp funnels, we build complete growth systems that help
+            businesses attract, convert and retain more customers.
+          </p>
         </Reveal>
+
         <div className="mt-14 grid md:grid-cols-3 gap-6">
           {[
             {
               n: "01",
-              t: "Audit & Strategy",
-              d: "Deep audit of your funnel, ads and offers. We map a 90-day growth plan.",
+              t: "Research & Strategy",
+              d: "We analyze your business, competitors and audience to create a growth strategy focused on leads and visibility.",
             },
             {
               n: "02",
-              t: "Build & Launch",
-              d: "Creatives, landing pages and tracking shipped. Campaigns live in 14 days.",
+              t: "Content & Funnel Setup",
+              d: "We create AI-powered reels, websites and WhatsApp funnels designed to turn attention into real customer inquiries.",
             },
             {
               n: "03",
-              t: "Scale & Compound",
-              d: "Daily optimization, weekly creative, monthly compounding ROI.",
+              t: "Launch & Growth",
+              d: "We optimize content, improve conversion systems and scale your online presence for consistent business growth.",
             },
           ].map((s, i) => (
             <Reveal key={s.n} delay={i * 0.08}>
               <div className="rounded-3xl bg-foreground text-background p-8 h-full">
                 <div className="font-display text-5xl font-bold opacity-30">{s.n}</div>
+
                 <h3 className="mt-6 font-display text-2xl font-semibold">{s.t}</h3>
+
                 <p className="mt-2 text-background/70">{s.d}</p>
               </div>
             </Reveal>
           ))}
         </div>
       </section>
-
       {/* TESTIMONIALS */}
       <section className="mx-auto max-w-7xl px-6 py-24">
         <Reveal>
-          <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-balance max-w-3xl">
-            Founders who scaled with us.
+          <p className="text-sm uppercase tracking-widest text-violet font-semibold">
+            Why GoDigitly
+          </p>
+
+          <h2 className="mt-3 font-display text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-balance max-w-4xl">
+            Helping local businesses look modern, go viral and get more customers.
           </h2>
+
+          <p className="mt-5 max-w-3xl text-lg text-muted-foreground leading-relaxed">
+            From gyms and cafés to home businesses, GoDigitly creates reels, websites, WhatsApp
+            systems and growth ideas that help local brands stand out online and attract real
+            customers.
+          </p>
         </Reveal>
+
         <div className="mt-12 grid md:grid-cols-3 gap-5">
-          {testimonials.map((t, i) => (
-            <Reveal key={t.name} delay={i * 0.06}>
-              <figure className="rounded-3xl bg-card border border-border p-7 h-full flex flex-col">
-                <Quote className="size-6 text-violet" />
-                <blockquote className="mt-4 text-lg leading-snug">{t.quote}</blockquote>
-                <figcaption className="mt-6 pt-6 border-t border-border">
-                  <div className="font-semibold">{t.name}</div>
-                  <div className="text-sm text-muted-foreground">{t.role}</div>
-                </figcaption>
-              </figure>
+          {[
+            {
+              title: "Gym Growth System",
+              desc: "Planned a modern gym experience with a custom app for workout tracking, diet timing, membership updates and WhatsApp support to keep members active and connected.",
+            },
+            {
+              title: "Pizza Stall Viral Campaign",
+              desc: "Created reel concepts and offer campaigns like unlimited pizza with garlic bread deals designed to grab attention and increase local walk-ins fast.",
+            },
+            {
+              title: "Jewellery Business Setup",
+              desc: "Built a WhatsApp selling system, social content ideas and online product setup for a home-based artificial jewellery business to help generate daily customer inquiries.",
+            },
+          ].map((item, i) => (
+            <Reveal key={item.title} delay={i * 0.06}>
+              <div className="rounded-3xl bg-card border border-border p-7 h-full">
+                <div className="size-12 rounded-2xl bg-violet/10 flex items-center justify-center">
+                  <ArrowUpRight className="size-5 text-violet" />
+                </div>
+
+                <h3 className="mt-6 font-display text-2xl font-semibold">{item.title}</h3>
+
+                <p className="mt-3 text-muted-foreground leading-relaxed">{item.desc}</p>
+              </div>
             </Reveal>
           ))}
         </div>
       </section>
 
       {/* CTA */}
-      <section className="mx-auto max-w-7xl px-6 pb-24">
-        <Reveal>
-          <div className="relative overflow-hidden rounded-[2rem] gradient-bg p-10 sm:p-16 text-white text-center">
-            <div className="blob absolute -top-10 -right-10 size-72 bg-white/30" />
-            <h2 className="relative font-display text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-balance max-w-3xl mx-auto">
-              Ready to make your ad spend work harder?
+      <section id="contact" className="relative py-20 overflow-hidden">
+        <div className="container relative mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="max-w-2xl mx-auto text-center"
+          >
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-[11px] font-semibold tracking-[0.2em] uppercase bg-primary/10 text-primary border border-primary/20 mb-4">
+              GoDigitly
+            </span>
+
+            <h2 className="font-heading text-3xl sm:text-4xl md:text-[4rem] font-black tracking-tight leading-tight">
+              Scan. Connect. <span className="text-gradient">Grow</span>
             </h2>
-            <p className="relative mt-5 text-white/80 max-w-xl mx-auto">
-              Free 30-min strategy call. No fluff — actionable insights you can apply this week.
+
+            <p className="mt-4 text-sm sm:text-base text-muted-foreground max-w-lg mx-auto leading-relaxed">
+              Viral reels, websites and WhatsApp systems designed to help local businesses get more
+              customers.
             </p>
-            <div className="relative mt-8 flex flex-wrap justify-center gap-3">
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 rounded-full bg-white text-foreground px-7 py-4 font-semibold hover:scale-[1.02] transition"
+
+            {/* QR Card */}
+            {/* QR + Buttons Row */}
+            <div className="mt-10 flex flex-col md:flex-row items-center justify-center gap-6">
+              {/* QR Card */}
+              <motion.div
+                initial={{ scale: 0.92, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{
+                  type: "spring",
+                  stiffness: 180,
+                  damping: 18,
+                  delay: 0.2,
+                }}
+                className="relative inline-block"
               >
-                Book your free call <ArrowUpRight className="size-4" />
-              </Link>
-              <a
-                href="https://wa.me/919999999999"
-                className="inline-flex items-center gap-2 rounded-full border border-white/40 px-7 py-4 font-semibold hover:bg-white/10 transition"
-              >
-                Message on WhatsApp
-              </a>
+                {/* Glow */}
+                <div className="absolute -inset-4 bg-primary/15 blur-2xl rounded-full" />
+
+                {/* Card */}
+                <div className="relative glass rounded-[1.7rem] border border-white/10 bg-white/5 backdrop-blur-2xl p-5 sm:p-6 shadow-2xl">
+                  {/* Animated Border */}
+                  <motion.div
+                    animate={{ rotate: 360 }}
+                    transition={{
+                      duration: 12,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
+                    className="absolute inset-0 rounded-[1.7rem] border border-primary/20"
+                  />
+
+                  {/* QR Container */}
+                  <div className="relative bg-white rounded-2xl p-6 shadow-xl flex items-center justify-center">
+                    <img
+                      src="src/assets/qrcode.png"
+                      alt="WhatsApp QR"
+                      className="w-40 h-40 sm:w-44 sm:h-44 object-cover rounded-xl"
+                    />
+                  </div>
+
+                  <div className="mt-4">
+                    <h3 className="text-lg font-bold">Scan to Chat on WhatsApp</h3>
+
+                    <p className="mt-1.5 text-xs sm:text-sm text-muted-foreground max-w-[260px] mx-auto leading-relaxed">
+                      Connect instantly and let's discuss how GoDigitly can help grow your business
+                      online.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Side Buttons */}
+              <div className="flex flex-col gap-3 ml-0 mt-7 md:gap-6 md:ml-16 ">
+                <motion.a
+                  href="https://wa.me/917065993749"
+                  target="_blank"
+                  rel="src\assets\qrcode.png"
+                  whileHover={{ scale: 1.04 }}
+                  whileTap={{ scale: 0.96 }}
+                  className="inline-flex items-center justify-center gap-2 bg-[hsl(142_70%_45%)] text-white px-6 py-3 rounded-full font-semibold text-sm shadow-lg hover:shadow-xl transition-all min-w-[180px]"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  WhatsApp
+                </motion.a>
+
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center justify-center gap-2 border border-border bg-card/50 backdrop-blur-xl px-6 py-3 rounded-full font-semibold text-sm hover:bg-card transition-all min-w-[180px]"
+                >
+                  Start Growth
+                </Link>
+              </div>
             </div>
-          </div>
-        </Reveal>
+          </motion.div>
+        </div>
       </section>
     </>
   );

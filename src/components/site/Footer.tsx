@@ -63,7 +63,7 @@ export function Footer() {
             Get in touch
           </h4>
           <p className="text-sm">hello@godigitly.com</p>
-          <p className="text-sm text-muted-foreground">Bengaluru · Mumbai · Remote</p>
+          <p className="text-sm text-muted-foreground">Delhi · Remote</p>
           <Link
             to="/contact"
             className="mt-5 inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-foreground text-background text-sm font-semibold"
