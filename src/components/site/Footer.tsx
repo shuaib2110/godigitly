@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { Instagram, Linkedin, Twitter } from "lucide-react";
 
 export function Footer() {
@@ -15,14 +15,14 @@ export function Footer() {
           </p>
           <div className="mt-6 flex gap-3">
             {[Instagram, Linkedin, Twitter].map((Icon, i) => (
-              <a
+              <Link
                 key={i}
-                href="#"
+                to="#"
                 aria-label="Social"
                 className="size-10 grid place-items-center rounded-full border border-border hover:bg-foreground hover:text-background transition"
               >
                 <Icon className="size-4" />
-              </a>
+              </Link>
             ))}
           </div>
         </div>

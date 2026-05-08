@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import {
@@ -11,26 +11,8 @@ import {
   Star,
   MessageCircle,
 } from "lucide-react";
-import { Reveal } from "@/components/site/Reveal";
-
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "GoDigitly — Performance Marketing Agency that Scales Brands" },
-      {
-        name: "description",
-        content:
-          "We don't just market — we scale businesses. Facebook Ads, Google Ads, lead generation and WhatsApp funnels engineered for measurable ROI.",
-      },
-      { property: "og:title", content: "GoDigitly — Performance Marketing Agency" },
-      {
-        property: "og:description",
-        content: "Performance marketing & lead generation that delivers predictable revenue.",
-      },
-    ],
-  }),
-  component: HomePage,
-});
+import { Reveal } from "../components/site/Reveal";
+import qr from "../assets/qrcode.png";
 
 const services = [
   {
@@ -402,7 +384,7 @@ function HomePage() {
                   {/* QR Container */}
                   <div className="relative bg-white rounded-2xl p-6 shadow-xl flex items-center justify-center">
                     <img
-                      src="src/assets/qrcode.png"
+                      src={qr}
                       alt="WhatsApp QR"
                       className="w-40 h-40 sm:w-44 sm:h-44 object-cover rounded-xl"
                     />
@@ -424,7 +406,7 @@ function HomePage() {
                 <motion.a
                   href="https://wa.me/917065993749"
                   target="_blank"
-                  rel="src\assets\qrcode.png"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.04 }}
                   whileTap={{ scale: 0.96 }}
                   className="inline-flex items-center justify-center gap-2 bg-[hsl(142_70%_45%)] text-white px-6 py-3 rounded-full font-semibold text-sm shadow-lg hover:shadow-xl transition-all min-w-[180px]"
@@ -447,3 +429,5 @@ function HomePage() {
     </>
   );
 }
+
+export default HomePage;

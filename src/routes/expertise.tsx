@@ -1,5 +1,5 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { Reveal } from "@/components/site/Reveal";
+import { Link } from "react-router-dom";
+import { Reveal } from "../components/site/Reveal";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState } from "react";
 import {
@@ -11,25 +11,6 @@ import {
   Plus,
   ArrowUpRight,
 } from "lucide-react";
-
-export const Route = createFileRoute("/expertise")({
-  head: () => ({
-    meta: [
-      { title: "Our Expertise — Facebook Ads, Google Ads, WhatsApp Funnels | GoDigitly" },
-      {
-        name: "description",
-        content:
-          "Performance marketing services: Facebook Ads, Google Ads, lead generation, funnel building and WhatsApp marketing — all built for ROI.",
-      },
-      { property: "og:title", content: "GoDigitly Expertise" },
-      {
-        property: "og:description",
-        content: "The growth services we ship — engineered for measurable ROI.",
-      },
-    ],
-  }),
-  component: ExpertisePage,
-});
 
 const services = [
   {
@@ -184,3 +165,5 @@ function ExpertisePage() {
     </>
   );
 }
+
+export default ExpertisePage;

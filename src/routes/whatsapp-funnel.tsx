@@ -1,5 +1,5 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { Reveal } from "@/components/site/Reveal";
+import { Link } from "react-router-dom";
+import { Reveal } from "../components/site/Reveal";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import {
@@ -11,25 +11,6 @@ import {
   MousePointerClick,
   Trophy,
 } from "lucide-react";
-
-export const Route = createFileRoute("/whatsapp-funnel")({
-  head: () => ({
-    meta: [
-      { title: "WhatsApp Funnel — Convert Ad Traffic into Closed Deals | GoDigitly" },
-      {
-        name: "description",
-        content:
-          "Click-to-WhatsApp ads + automated qualification + human handoff. The fastest path from ad spend to closed deal in India.",
-      },
-      { property: "og:title", content: "WhatsApp Funnels by GoDigitly" },
-      {
-        property: "og:description",
-        content: "An interactive look at how we turn clicks into conversations into customers.",
-      },
-    ],
-  }),
-  component: WhatsappFunnelPage,
-});
 
 const chatScript = [
   { from: "bot", text: "👋 Hey! Welcome to GoDigitly. What brings you here today?" },
@@ -251,12 +232,12 @@ function WhatsappFunnelPage() {
               </p>
             </div>
             <div className="relative flex flex-wrap gap-3">
-              <a
-                href="https://wa.me/917065993749"
+              <Link
+                to="https://wa.me/917065993749"
                 className="inline-flex items-center gap-2 rounded-full bg-[#25D366] text-white px-7 py-4 font-semibold"
               >
                 <MessageCircle className="size-4" /> Message us
-              </a>
+              </Link>
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 rounded-full bg-white text-foreground px-7 py-4 font-semibold"
@@ -303,3 +284,5 @@ function QRCode() {
     </svg>
   );
 }
+
+export default WhatsappFunnelPage;

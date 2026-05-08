@@ -1,24 +1,8 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { Reveal } from "@/components/site/Reveal";
+import { Link } from "react-router-dom";
+import { Reveal } from "../components/site/Reveal";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowUpRight, TrendingUp } from "lucide-react";
-
-export const Route = createFileRoute("/case-studies")({
-  head: () => ({
-    meta: [
-      { title: "Case Studies — Real Growth, Real ROI | GoDigitly" },
-      {
-        name: "description",
-        content:
-          "See how GoDigitly scaled D2C, SaaS and service brands with performance marketing — real ROAS, real revenue, real campaigns.",
-      },
-      { property: "og:title", content: "GoDigitly Case Studies" },
-      { property: "og:description", content: "Before & after results from real client campaigns." },
-    ],
-  }),
-  component: CaseStudiesPage,
-});
 
 const cases = [
   {
@@ -270,3 +254,5 @@ function CaseStudiesPage() {
     </>
   );
 }
+
+export default CaseStudiesPage;

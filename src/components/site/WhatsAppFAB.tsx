@@ -1,9 +1,10 @@
 import { MessageCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function WhatsAppFAB() {
   return (
-    <a
-      href="https://wa.me/917065993749?text=Hi%20GoDigitly%2C%20I%27d%20like%20to%20scale%20my%20business."
+    <Link
+      to="https://wa.me/917065993749?text=Hi%20GoDigitly%2C%20I%27d%20like%20to%20scale%20my%20business."
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"
@@ -14,6 +15,6 @@ export function WhatsAppFAB() {
         <MessageCircle className="size-5" />
         <span className="hidden sm:inline text-sm font-semibold">Chat on WhatsApp</span>
       </span>
-    </a>
+    </Link>
   );
 }

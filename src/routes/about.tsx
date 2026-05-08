@@ -1,25 +1,6 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { Reveal } from "@/components/site/Reveal";
+import { Link } from "react-router-dom";
+import { Reveal } from "../components/site/Reveal";
 import { ArrowUpRight, Heart, Rocket, Eye } from "lucide-react";
-
-export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: "About GoDigitly — Performance Marketing for Ambitious Brands" },
-      {
-        name: "description",
-        content:
-          "GoDigitly is a team of strategists, media buyers and creators obsessed with scaling brands through performance marketing.",
-      },
-      { property: "og:title", content: "About GoDigitly" },
-      {
-        property: "og:description",
-        content: "Our story, mission and the team behind your growth.",
-      },
-    ],
-  }),
-  component: AboutPage,
-});
 
 const timeline = [
   {
@@ -106,7 +87,7 @@ function AboutPage() {
             <div className="aspect-[4/5] rounded-[2rem] gradient-bg relative overflow-hidden">
               <div className="absolute inset-0 grain" />
               <div className="absolute bottom-6 left-6 right-6 glass rounded-2xl p-4">
-                <div className="font-display text-xl font-semibold">Arjun Kapoor</div>
+                <div className="font-display text-xl font-semibold">Shuaib Ahmad</div>
                 <div className="text-sm text-muted-foreground">Founder & CEO</div>
               </div>
             </div>
@@ -181,3 +162,5 @@ function AboutPage() {
     </>
   );
 }
+
+export default AboutPage;

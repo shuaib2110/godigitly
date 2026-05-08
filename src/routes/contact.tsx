@@ -1,27 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { Reveal } from "@/components/site/Reveal";
+import { Reveal } from "../components/site/Reveal";
 import { useState, type FormEvent } from "react";
 import { toast } from "sonner";
 import { Mail, MapPin, Phone, MessageCircle, Calendar, ArrowUpRight, Check } from "lucide-react";
-
-export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
-      { title: "Contact GoDigitly — Book a Free Strategy Call" },
-      {
-        name: "description",
-        content:
-          "Book a free 30-minute strategy call with GoDigitly. Performance marketing, lead generation and WhatsApp funnels for ambitious brands.",
-      },
-      { property: "og:title", content: "Contact GoDigitly" },
-      {
-        property: "og:description",
-        content: "Free 30-min strategy call. No fluff, just actionable growth ideas.",
-      },
-    ],
-  }),
-  component: ContactPage,
-});
+import { Link } from "react-router-dom";
 
 const slots = ["10:00", "11:30", "14:00", "15:30", "17:00"];
 const days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
@@ -160,8 +141,8 @@ function ContactPage() {
           {/* Side info */}
           <div className="lg:col-span-5 space-y-5">
             <Reveal>
-              <a
-                href="https://wa.me/917065993749"
+              <Link
+                to="https://wa.me/917065993749"
                 className="block rounded-[2rem] bg-[#25D366] text-white p-8 hover:scale-[1.01] transition"
               >
                 <MessageCircle className="size-7" />
@@ -172,7 +153,7 @@ function ContactPage() {
                 <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold">
                   Open chat <ArrowUpRight className="size-4" />
                 </span>
-              </a>
+              </Link>
             </Reveal>
 
             <Reveal delay={0.05}>
@@ -252,3 +233,5 @@ function Info({
     </div>
   );
 }
+
+export default ContactPage;

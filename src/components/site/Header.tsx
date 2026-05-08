@@ -1,6 +1,6 @@
-import { Link, useRouterState } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { ArrowUpRight, Menu, X } from "lucide-react";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -13,7 +13,6 @@ const nav = [
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const { location } = useRouterState();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -21,10 +20,6 @@ export function Header() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
-  useEffect(() => {
-    setOpen(false);
-  }, [location.pathname]);
 
   return (
     <header
@@ -48,8 +43,6 @@ export function Header() {
                 key={n.to}
                 to={n.to}
                 className="underline-grow hover:text-foreground transition-colors"
-                activeProps={{ className: "text-foreground" }}
-                activeOptions={{ exact: n.to === "/" }}
               >
                 {n.label}
               </Link>
@@ -59,9 +52,9 @@ export function Header() {
           <div className="hidden lg:flex items-center gap-3">
             <Link
               to="/contact"
-              className="px-5 py-2.5 rounded-full bg-foreground text-background text-sm font-semibold hover:opacity-90 transition"
+              className="mt-6 inline-flex items-center gap-2 text-sm font-semibold underline-grow"
             >
-              Book a call →
+              Want results like this? <ArrowUpRight className="size-4" />
             </Link>
           </div>
 
@@ -88,9 +81,9 @@ export function Header() {
               ))}
               <Link
                 to="/contact"
-                className="mt-2 text-center px-5 py-3 rounded-full bg-foreground text-background font-semibold"
+                className="mt-8 inline-flex items-center gap-2 rounded-full bg-background text-foreground px-7 py-4 font-semibold"
               >
-                Book a call →
+                Book a strategy call <ArrowUpRight className="size-4" />
               </Link>
             </nav>
           </div>
